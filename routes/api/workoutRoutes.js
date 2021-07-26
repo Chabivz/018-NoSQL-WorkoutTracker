@@ -45,31 +45,20 @@ router.post("/", async ({ body }, res) => {
     }
 });
 
+// Chart
 router.get("/range", async (req, res) => {
   try {
-    const today = new Date(Date.now());
-    const sevenDays = new Date.now();
-    sevenDays.setDate(sevenDaysAgo.getDate() - 7);
-    const range = await Workout.find({
-      day: {
-        $gte: sevenDays,
-        $lte: today
-      },
-    });
-    const response = range.map((workout, i) => {
-      const { id, day, exercises } = workout;
-      const withTotalDuration = {
-        id,
-        day,
-        exercises: workout.exercises.reduce(
-          (acc, cur) => acc + cur.totalDuration,
-          0
-        ),
-      };
-      return withTotalDuration;
-    });
-    res.json(response);
+    const newRange = await Workout.aggregate([{
+      $addFields: {
+        totalDuration: {
+          $sum: "$exercises.duration"
+        }
+      }
+    }]);
+    res.json(newRange);
+    
   } catch (err) {
+    
     res.json(err)
   }
 });

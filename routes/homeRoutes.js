@@ -1,6 +1,5 @@
 const path = require("path");
 const router = require("express").Router();
-const { Workout } = require("../models");
 
 router.get("/exercise", (req, res) => {
   try {
@@ -17,7 +16,5 @@ router.get("/stats", (req, res) => {
     res.status(400).json(err);
   }
 });
-
-
 
 module.exports = router;
