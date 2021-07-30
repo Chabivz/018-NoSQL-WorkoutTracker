@@ -1,10 +1,9 @@
-# 018-NoSQL-WorkoutTracker
-Bootcamp Spot Homework
-
+# NoSQL Fitness Tracker
 
 [![Badge](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
 [![Badge](https://img.shields.io/badge/GitHub-chabivz-blueviolet?style=flat-square&logo=appveyor)](https://github.com/chrisabiva)
 
+Hi Fitness enthusiast. This is a web app where you can track your workout exercies by cardio and resistance using MongoDB and Express
 ## Table of Contents
 
 - [About the Project](#about-the-project)
@@ -14,61 +13,54 @@ Bootcamp Spot Homework
 - [License](#License)
 
 ## About the Project
-- The motivation for this project is to build a commpunity of developers where coders share, stay up-to-date and grow their careers in Tech industry.
-- This website will allow users to `Sign in` to view their own personal Dashboard to post and showcase their article. 
-- Using `New Article` button, the user can post their own article and delete existing article(s) that they have posted. 
-- `Logout` will end the session of the user.
-- `Login` Able to login registered users. 
+- The motivation for this project is to track our workout exercises. Where it is Resistance or Cardio
+- When I want to add a new resistance workout it should input the `Exercise name, Weight (lbs), Sets, Reps and Duration (minutes)` of my workout. 
+- When I want to add a new cardio workout it should input the `Exercise Name, Distance (miles), and Duration (minutes)`
+- When I clicked the Dashboard in the Navigation bar it will display my workout dashboard chart.
 
 - Built with the following packages: 
-  - [bcrypt](https://www.npmjs.com/package/bcrypt)
-  - [bulma](https://bulma.io/)
-  - [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
   - [CSS](https://www.w3schools.com/css/)
   - [express](https://www.npmjs.com/package/express)
-  - [express-handlebars](https://www.npmjs.com/package/express-handlebars)
-  - [express-session](https://www.npmjs.com/package/express-session)
   - [HTML](https://www.w3schools.com/html/)
-  - [handlebars](https://www.npmjs.com/package/handlebars)
   - [Javascript](https://www.npmjs.com/package/CSS)
-  - [path](https://www.npmjs.com/package/path)
   - [nodemon](https://www.npmjs.com/package/nodemon)
-  - [mysql](https://www.npmjs.com/package/mysql)
-  - [mysql2](https://www.npmjs.com/package/mysql2)
-  - [sequelize](https://www.npmjs.com/package/sequelize)
+  - [mongoose](https://www.npmjs.com/package/mongoose)
 
 ## Installation
 
-- Open [Tech Blog](https://github.com/Chabivz/014-TechBlog)
+- Open [Fitness Tracker](https://github.com/Chabivz/014-TechBlog)
 - Clone the repository
-- install all the packages by `npm i` or `npm i handlebars path express express-session express-handlebars connect-session-sequelize mysql sequelize dotenv bcrypt mysql2`
-- Copy `.envEXAMPLE` and paste to create an `.env` file. Input your `MySQL` credentials for connection.
-- Copy `Database Schema` and Paste it to local `Mysql Workbench`
+- install all the packages by `npm i` or `npm i express mongoose path `
+- On a separate terminal run `mongo` or `mongod` server.
 - Seed by going typing `node seeds/seed.js ` in the terminal.
 - Start the server by typing `node server.js` or `nodemon`
 
 ## Usage
-- Visit the deployed Heroku app [Tech Blog](https://limitless-citadel-24664.herokuapp.com/)
-- Login by clicking the `Login` button, or if you are not a user click `Signup` button on the login modal.
-- Enter `Name`, `Email` and `Password`.
-- Create a new article by clicking `New Article`. 
-- On `New Article` you can delete an existing article that you have posted by clicking the `Delete` button
-- `Comment` User can comment on the selected article if they are logged in.
-- `Logout` will end the session for the User
+- Visit the deployed Heroku app [Fitness Tracker](https://limitless-citadel-24664.herokuapp.com/)
+- In The Fitness Tracker Home Page. Add a `New Workout`.
+- Enter `Exercise name, Weight (lbs), Sets, Reps and Duration` for `Resistance Workout`
+- Enter `Exercise Name, Distance (miles), and Duration (minutes)` for `Cardio Workout`
+- When I go back to the `Fitness Tracker` I will see my last workout and Add more workout if I click `Continue Workout`
+- When I click `Continue Workout` it will display the 
+  - Total Workout Duration
+  - Exercise Performed 
+  - Total Distance Covered
+  - Total Weight Lifted
+  - Total Sets Performed
+  - Total Reps Performed
+
 
 |Demo|
 |---|
-|![Online Demo](./assets/images/DemoTechBlog.gif)|
+|![Online Demo](./public/images/fitnesstracker.gif)|
 |Homepage|
-|![Homepage](./assets/images/Homepage.png)|
-|Signup|
-|![Signup](./assets/images/Signup.png)|
-|New Article|
-|![New Article](./assets/images/NewArticle.png)|
-|Article Page and Adding Comment|
-|![Article](./assets/images/Article.png)|
-|Delete Article|
-|![Delete Article](./assets/images/DeleteArticle.png)|
+|![Homepage](./public/images/1.png)|
+|Adding Resistance Exercise|
+|![Add Resistance](./public/images/4.png)|
+|Adding Cardio Exercise|
+|![Add Cardio](./public/images/6.png)|
+|Displaying Workout Chart|
+|![Chart](./public/images/5.png)|
 
 ## Question
 
